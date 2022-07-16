@@ -1,0 +1,52 @@
+% polymake for maelforcier
+% Thu Jun 10 15:17:03 2021
+% p_bounded
+
+\begin{tikzpicture}[x  = {(1cm,0cm)},
+                    y  = {(0cm,1cm)},
+                    z  = {(0cm,0cm)},
+                    scale = 1,
+                    color = {lightgray}]
+
+
+  % POINTS STYLE
+  \definecolor{pointcolor_p_bounded}{rgb}{ 1,0,0 }
+  \tikzstyle{pointstyle_p_bounded} = [fill=pointcolor_p_bounded]
+
+  % DEF POINTS
+  \coordinate (v0_p_bounded) at (-1.4, -3.4);
+  \coordinate (v1_p_bounded) at (1, 1);
+  \coordinate (v2_p_bounded) at (1, -1);
+  \coordinate (v3_p_bounded) at (-1, 1);
+  \coordinate (v4_p_bounded) at (-3.4, -1.4);
+  \coordinate (v5_p_bounded) at (-3.4, -3.4);
+
+
+  % EDGES STYLE
+  \definecolor{edgecolor_p_bounded}{rgb}{ 0,0,0 }
+
+  % FACES STYLE
+  \definecolor{facetcolor_p_bounded}{rgb}{ 0.4667,0.9255,0.6196 }
+
+  \tikzstyle{facestyle_p_bounded} = [fill=facetcolor_p_bounded, fill opacity=0.85, draw=edgecolor_p_bounded, line width=1 pt, line cap=round, line join=round]
+
+
+  % FACES and EDGES and POINTS in the right order
+  \draw[facestyle_p_bounded] (v4_p_bounded) -- (v5_p_bounded) -- (v0_p_bounded) -- (v2_p_bounded) -- (v1_p_bounded) -- (v3_p_bounded) -- (v4_p_bounded) -- cycle;
+
+
+  %POINTS
+  \node at (v4_p_bounded) [text=black, inner sep=0.5pt, above right, draw=none, align=left] { };
+  \node at (v5_p_bounded) [text=black, inner sep=0.5pt, above right, draw=none, align=left] { };
+  \node at (v0_p_bounded) [text=black, inner sep=0.5pt, above right, draw=none, align=left] { };
+  \fill[pointcolor_p_bounded] (v2_p_bounded) circle (1 pt);
+  \node at (v2_p_bounded) [text=black, inner sep=0.5pt, above right, draw=none, align=left] {1};
+  \fill[pointcolor_p_bounded] (v1_p_bounded) circle (1 pt);
+  \node at (v1_p_bounded) [text=black, inner sep=0.5pt, above right, draw=none, align=left] {3};
+  \fill[pointcolor_p_bounded] (v3_p_bounded) circle (1 pt);
+  \node at (v3_p_bounded) [text=black, inner sep=0.5pt, above right, draw=none, align=left] {2};
+
+
+  %FACETS
+
+\end{tikzpicture}
